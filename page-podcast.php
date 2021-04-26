@@ -2,27 +2,33 @@
 /**
 * The template for displaying front page
 
+
+
 */
 
 
 
 
 
+
+
 get_header();
-
-
-
 ?>
-<?php
-the_content();
-?>
+
+
+
 
 <head>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
 </head>
 
+
+
 <main id="main" class="site-main">
+    <?php
+the_content();
+?>
     <nav id="filtrering"></nav>
     <h1>Alle</h1>
     <div id="podcast-oversigt">
@@ -31,13 +37,17 @@ the_content();
 
 
 
+
+
 <template>
     <article>
+        <img class="podcastpic" src="" alt="">
         <h2></h2>
-        <img src="" alt="">
         <p class="kort_beskrivelse"></p>
     </article>
 </template>
+
+
 
 
 
@@ -45,13 +55,22 @@ the_content();
     body {
         padding: 0;
         margin: 0;
-        background-color: #db083a;
+        background: rgb(255, 225, 166);
+        background: linear-gradient(180deg, rgba(255, 225, 166, 1) 0%, rgba(255, 240, 209, 1) 100%);
     }
+
+
 
     main {
         padding-right: 40px;
         padding-left: 40px;
+        width: 100%;
+
+
+
     }
+
+
 
     #podcast-oversigt {
         display: grid;
@@ -59,25 +78,37 @@ the_content();
         grid-gap: 0.8em;
     }
 
-    img {
+
+
+    .podcastpic {
         width: 100%;
+        border: 5px solid white;
     }
+
+
 
     h2 {
-        color: white;
-
+        color: black;
         font-family: 'Josefin Sans', sans-serif;
     }
+
+
 
     h1 {
         text-align: center;
-        color: white;
+        color: #DBAA1F;
         font-family: 'Josefin Sans', sans-serif;
     }
 
+
+
+    p {
+        color: black;
+    }
+
+
+
     article {
-        color: white;
-        background-color: #331119;
         padding: 20px;
         cursor: pointer;
         transition: 0.2s linear;
@@ -87,31 +118,59 @@ the_content();
         transform: scale(1.1);
     }
 
+
+    .menu-toggle,
+    button,
+    .ast-button,
+    .ast-custom-button,
+    .button,
+    input#submit,
+    input[type="button"],
+    input[type="submit"],
+    input[type="reset"] {
+        padding-left: 10px;
+        padding-right: 10px;
+        background-color: #DB083A;
+
+
+
+    }
+
+
+
     #filtrering {
         padding: 20px;
         text-align: center;
     }
 
+
+
     button {
         font-size: 2em;
         margin: 10px;
-        color: white;
-        transition: 0.5s linear;
+        color: #DB083A;
+        transition: 0.2s linear;
         background-color: rgba(51, 51, 51, 0);
         border-radius: 6px;
-        padding: 0.8em 1em 0.8em 1em;
+        padding: 0.8em 0.2em 0.8em 0.2em;
     }
+
+
 
     button:hover {
         transform: scale(1.1);
-        color: pink;
+        color: #DBAA1F;
         background-color: rgba(51, 51, 51, 0);
         cursor: pointer;
     }
 
+
+
     button.active {
-        color: #2bc68a;
+        color: #DBAA1F;
     }
+
+
 
     button:focus {
         border-color: rgba(51, 51, 51, 0);
@@ -122,8 +181,12 @@ the_content();
 
 
 
+
+
 <script>
     let podcasts = [];
+
+
 
 
 
@@ -131,13 +194,21 @@ the_content();
 
 
 
+
+
     let filterCategory = "alle";
+
+
 
     const header = document.querySelector("h1");
 
 
 
+
+
     const liste = document.querySelector("#podcast-oversigt");
+
+
 
 
 
@@ -147,8 +218,12 @@ the_content();
 
 
 
+
+
     // når DOM er loadet kalder den efter funktionen "start"
     document.addEventListener("DOMContentLoaded", start)
+
+
 
 
 
@@ -161,11 +236,17 @@ the_content();
 
 
 
+
+
     const url = "http://dziugas.dk/kea/2semester/tema9/radio_loud/wordpress//wp-json/wp/v2/podcast?per_page=100";
 
 
 
+
+
     const catUrl = "http://dziugas.dk/kea/2semester/tema9/radio_loud/wordpress//wp-json/wp/v2/categories";
+
+
 
 
 
@@ -182,7 +263,11 @@ the_content();
 
 
 
+
+
     function opretknapper() {
+
+
 
 
 
@@ -190,9 +275,13 @@ the_content();
 
 
 
-        //   categories.forEach(cat => {
-        //  document.querySelector("#filtrering").innerHTML += `<button class="filter active" data-podcast="${cat.id}">${cat.name}</button>`
+
+
+        // categories.forEach(cat => {
+        // document.querySelector("#filtrering").innerHTML += `<button class="filter active" data-podcast="${cat.id}">${cat.name}</button>`
         //})
+
+
 
         categories.forEach(cat => {
             if (cat.name == "Alle") {
@@ -204,11 +293,16 @@ the_content();
 
 
 
+
+
         addEventListenerToButtons();
 
 
 
+
+
     }
+
 
 
 
@@ -225,6 +319,8 @@ the_content();
 
 
 
+
+
     function filtrering() {
         document.querySelectorAll("#filtrering button").forEach(elm => {
             elm.classList.remove("active")
@@ -237,8 +333,12 @@ the_content();
 
 
 
+
+
         visPodcasts();
     }
+
+
 
 
 
@@ -263,6 +363,8 @@ the_content();
     }
 
 </script>
+
+
 
 
 
