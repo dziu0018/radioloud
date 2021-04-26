@@ -200,7 +200,7 @@ the_content();
 
 
 
-    const header = document.querySelector("h1");
+
 
 
 
@@ -327,7 +327,7 @@ the_content();
         });
         filterPodcast = this.dataset.podcast;
         console.log(filterPodcast);
-        header.textContent = this.textContent;
+
         this.classList.add("active");
 
 
