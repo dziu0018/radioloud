@@ -20,9 +20,9 @@ the_content();
 
 
 <main id="main" class="site-main">
-    <h1>Alle</h1>
     <div class="valgt"></div>
     <nav id="filtrering"></nav>
+    <h1>Alle</h1>
     <div id="podcast-oversigt">
     </div>
 </main>
@@ -65,6 +65,11 @@ the_content();
         color: white;
     }
 
+    h1 {
+        text-align: center;
+        color: white;
+    }
+
     article {
         color: white;
         background-color: #331119;
@@ -80,7 +85,14 @@ the_content();
     button {
         margin: 10px;
         color: white;
-        background-color: #333333
+        background-color: rgba(51, 51, 51, 0);
+        border-radius: 6px;
+        padding: 0.8em 1em 0.8em 1em;
+    }
+
+    button:hover {
+        transform: scale(1.1);
+        color: pink;
     }
 
     .valgt {
