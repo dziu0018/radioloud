@@ -90,6 +90,7 @@ the_content();
         font-size: 2em;
         margin: 10px;
         color: white;
+        transition: 0.5s linear;
         background-color: rgba(51, 51, 51, 0);
         border-radius: 6px;
         padding: 0.8em 1em 0.8em 1em;
@@ -99,18 +100,17 @@ the_content();
         transform: scale(1.1);
         color: pink;
         background-color: rgba(51, 51, 51, 0);
-
+        cursor: pointer;
     }
 
     button.active {
         color: #2bc68a;
     }
 
-    button:focus{
+    button:focus {
         border-color: rgba(51, 51, 51, 0);
         background-color: rgba(51, 51, 51, 0);
     }
-
 
 </style>
 
