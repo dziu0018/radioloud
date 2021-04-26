@@ -17,10 +17,12 @@ get_header();
 the_content();
 ?>
 
-
+<head>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+</head>
 
 <main id="main" class="site-main">
-    <div class="valgt"></div>
     <nav id="filtrering"></nav>
     <h1>Alle</h1>
     <div id="podcast-oversigt">
@@ -63,11 +65,13 @@ the_content();
 
     h2 {
         color: white;
+        font-family: 'Josefin Sans', sans-serif;
     }
 
     h1 {
         text-align: center;
         color: white;
+        font-family: 'Josefin Sans', sans-serif;
     }
 
     article {
@@ -83,6 +87,7 @@ the_content();
     }
 
     button {
+        font-size: 2em;
         margin: 10px;
         color: white;
         background-color: rgba(51, 51, 51, 0);
@@ -93,15 +98,19 @@ the_content();
     button:hover {
         transform: scale(1.1);
         color: pink;
-    }
+        background-color: rgba(51, 51, 51, 0);
 
-    .valgt {
-        background-color: white;
     }
 
     button.active {
-        color: red;
+        color: #2bc68a;
     }
+
+    button:focus{
+        border-color: rgba(51, 51, 51, 0);
+        background-color: rgba(51, 51, 51, 0);
+    }
+
 
 </style>
 
