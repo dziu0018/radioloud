@@ -74,6 +74,7 @@ the_content();
 
     #filtrering {
         padding: 20px;
+        text-align: center;
     }
 
     button {
