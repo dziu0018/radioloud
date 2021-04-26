@@ -65,6 +65,7 @@ the_content();
 
     h2 {
         color: white;
+
         font-family: 'Josefin Sans', sans-serif;
     }
 
@@ -79,6 +80,11 @@ the_content();
         background-color: #331119;
         padding: 20px;
         cursor: pointer;
+        transition: 0.2s linear;
+    }
+
+    article:hover {
+        transform: scale(1.1);
     }
 
     #filtrering {
