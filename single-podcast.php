@@ -1,77 +1,60 @@
 <?php
 /**
-* The template for displaying front page
+ * The template for displaying front page
 
-
-
-*/
-
-
+ */
 
 get_header();
 ?>
 
+    <div id="primary" class="content-area">
+        <main id="main" class="site-main">
 
+            <article>
+                <img class="pic" src="" alt="">
+                <div>
+                    <h1></h1>
+                    <p class="lang_beskrivelse"></p>
+                </div>
+            </article>
 
-<div id="primary" class="content-area">
-    <main id="main" class="site-main">
+            <section id="episode">
+                <template>
+                    <article>
+                        <div>
+                            <h2></h2>
+                            <p></p>
+                            <img src="" alt="">
+                            <a href="">Læs mere</a>
+                        </div>
+                    </article>
+                </template>
+            </section>
+        </main>
 
+    </div>
 
+   <style>
 
-        <article>
-            <img class="pic" src="" alt="">
-            <img class="episodepic" src="" alt="">
-
-
-
-            <div>
-                <h1></h1>
-                <p class="lang_beskrivelse"></p>
-            </div>
-        </article>
-
-
-
-        <section id="episode">
-            <template>
-                <article>
-                    <img src="" alt="">
-                    <div>
-                        <h2></h2>
-                        <p></p>
-                        <a href="">Læs mere</a>
-                    </div>
-                </article>
-            </template>
-        </section>
-    </main>
-    <style>
-        body {
+        body{
             padding: 0;
             margin: 0;
             background-color: #db083a;
         }
 
-
-
-        main {
+        main{
             padding-right: 40px;
             padding-left: 40px;
         }
-
         #podcast-oversigt {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
             grid-gap: 0.8em;
         }
 
-
-
         img {
             width: 20em;
         }
-
-
 
         h2 {
             color: white;
@@ -79,24 +62,18 @@ get_header();
             font-size: 1em;
         }
 
-
-
-        article {
+        article{
             color: white;
             background-color: #331119;
             padding: 20px;
             cursor: pointer;
         }
 
-
-
-        #filtrering {
+        #filtrering{
             padding: 20px;
         }
 
-
-
-        button {
+        button{
             margin: 10px;
             color: white;
             background-color: #333333
@@ -104,27 +81,17 @@ get_header();
 
     </style>
 
-
-
     <script>
         let podcast;
         let episode;
-        let aktuelepisode = <?php echo get_the_ID() ?>;
+        let aktuelpodcast = <?php echo get_the_ID() ?>;
 
+        console.log("aktuelpodcast: ", aktuelpodcast);
 
-
-        console.log("aktuelepisode: ", aktuelepisode);
-
-
-
-        const dbUrl = "http://dziugas.dk/kea/2semester/tema9/radio_loud/wordpress/wp-json/wp/v2/episode/" + aktuelepisode;
+        const dbUrl = "http://dziugas.dk/kea/2semester/tema9/radio_loud/wordpress/wp-json/wp/v2/podcast/" + aktuelpodcast;
         const episodeUrl = "http://dziugas.dk/kea/2semester/tema9/radio_loud/wordpress/wp-json/wp/v2/episode?per_page=100";
 
-
-
         const container = document.querySelector("#episode");
-
-
 
         async function getJson() {
             const data = await fetch(dbUrl);
@@ -134,40 +101,33 @@ get_header();
             episode = await data2.json();
             console.log("episode: ", episode);
 
-
-
             visPodcasts();
             visEpisode();
         }
-
-
 
         function visPodcasts() {
             console.log("visPodcasts");
             console.log(podcast);
             document.querySelector("h1").innerHTML = podcast.title.rendered;
-            document.querySelector("img").src = podcast.billede.guid;
+            document.querySelector(".pic").src = podcast.billede.guid;
+
             document.querySelector(".lang_beskrivelse").innerHTML = podcast.lang_beskrivelse;
         }
-
-
 
         function visEpisode() {
             console.log("visEpisode");
             let temp = document.querySelector("template");
             episode.forEach(episode => {
-                console.log("loop id :", aktuelepisode);
-                if (episode.horer_til_podcast == aktuelepisode) {
-                    console.log("loop kører id :", aktuelepisode);
+                console.log("loop id :", aktuelpodcast);
+                if (episode.horer_til_podcast == aktuelpodcast) {
+                    console.log("loop kører id :", aktuelpodcast);
                     let klon = temp.cloneNode(true).content;
                     klon.querySelector("h2").innerHTML = episode.title.rendered;
                     klon.querySelector("p").innerHTML = episode.lang_beskrivelse;
-                    klon.querySelector(".episodepic") = episode.billede.guid;
+                    klon.querySelector("img").src = episode.billede.guid;
                     klon.querySelector("article").addEventListener("click", () => {
                         location.href = episode.link;
                     })
-
-
 
                     klon.querySelector("a").href = episode.link;
                     console.log("episode", episode.link);
@@ -180,13 +140,8 @@ get_header();
     </script>
 
 
+    <!-- #primary -->
 
 
-</div>
-<!-- #primary -->
-
-
-
-
-<?php
+    <?php
 get_footer();
