@@ -30,7 +30,6 @@ get_header();
 the_content();
 ?>
     <nav id="filtrering"></nav>
-    <h1>Alle</h1>
     <div id="podcast-oversigt">
     </div>
 </main>
@@ -148,7 +147,7 @@ the_content();
     button {
         font-size: 2em;
         margin: 10px;
-        color: #DB083A;
+        color: black;
         transition: 0.2s linear;
         background-color: rgba(51, 51, 51, 0);
         border-radius: 6px;
@@ -159,7 +158,7 @@ the_content();
 
     button:hover {
         transform: scale(1.1);
-        color: #DBAA1F;
+        color: #DB083A;
         background-color: rgba(51, 51, 51, 0);
         cursor: pointer;
     }
@@ -167,7 +166,7 @@ the_content();
 
 
     button.active {
-        color: #DBAA1F;
+        color: #DB083A;
     }
 
 

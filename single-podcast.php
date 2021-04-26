@@ -118,6 +118,14 @@ the_content();
 
     .pic {}
 
+    a{
+        color: #DB083A;
+    }
+
+    img{
+        border: 5px solid white;
+    }
+
 </style>
 
 <script>
