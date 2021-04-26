@@ -51,7 +51,6 @@ the_content();
     body {
         padding: 0;
         margin: 0;
-        background-color: #db083a;
     }
 
     main {
@@ -86,7 +85,8 @@ the_content();
     }
 
     .mainarticle {
-        background-color: #dbdbdb;
+        background: rgb(242, 242, 237);
+        background: linear-gradient(180deg, rgba(242, 242, 237, 1) 0%, rgba(219, 219, 219, 1) 100%);
         padding: 20px;
         display: grid;
         grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
@@ -95,10 +95,11 @@ the_content();
 
     }
 
+
     .articlegrid {
+        background: rgb(252, 195, 208);
         color: white;
         padding: 20px;
-        background-color: #e6abb9;
         cursor: pointer;
         display: grid;
         grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));

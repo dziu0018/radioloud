@@ -111,11 +111,11 @@ the_content();
     article {
         padding: 20px;
         cursor: pointer;
-        transition: 0.2s linear;
+        transition: 0.2s ease-out;
     }
 
     article:hover {
-        transform: scale(1.1);
+        transform: scale(1.02);
     }
 
 
