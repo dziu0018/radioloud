@@ -24,6 +24,9 @@ get_header(); ?>
         padding: 0px 0px 0px 0px;
     }
 
+    .elementor-2 .elementor-element.elementor-element-30d546a>.elementor-widget-container {
+        padding: 0px 0px 0px 0px;
+    }
 
 
     .elementor-2 .elementor-element.elementor-element-9dd4624 {
