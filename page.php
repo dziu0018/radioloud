@@ -41,11 +41,11 @@ get_header(); ?>
     }
 
     .elementor-2 .elementor-element.elementor-element-8194d2b .elementor-swiper-button-next:hover {
-        background-color: white;
+        background-color: #00000021;
     }
 
     .elementor-2 .elementor-element.elementor-element-8194d2b .elementor-swiper-button-prev:hover {
-        background-color: white;
+        background-color: #00000021;
     }
 
 </style>
