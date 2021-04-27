@@ -117,6 +117,21 @@ the_content();
         background-color: #333333
     }
 
+    .back-button {
+        margin: 10px;
+        color: #DB083A;
+        background-color: #FFFFFF;
+        font-size: 1.3em;
+        font-family: 'Josefin Sans';
+        font-weight: 500;
+        transition: 0.2s ease-out;
+    }
+
+    .back-button:hover {
+        transform: scale(1.02);
+        cursor: pointer;
+    }
+
     .pic {}
 
     a {
