@@ -33,7 +33,7 @@ the_content();
                 <article class="underarticle">
                     <div class="articlegrid">
                         <div>
-                            <img class="pic2 "src="" alt="">
+                            <img class="pic2 " src="" alt="">
                         </div>
                         <div>
                             <h2></h2>
@@ -133,6 +133,8 @@ the_content();
     .back-button:hover {
         transform: scale(1.02);
         cursor: pointer;
+        background-color: #FFFFFF;
+        color: #DB083A;
     }
 
     .pic {}
