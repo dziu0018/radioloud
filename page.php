@@ -41,19 +41,19 @@ get_header(); ?>
     }
 
     .elementor-2 .elementor-element.elementor-element-8194d2b .elementor-swiper-button-next:hover {
-        background-color: #00000038;
+        background-color: #000000a6;
     }
 
     .elementor-2 .elementor-element.elementor-element-8194d2b .elementor-swiper-button-prev:hover {
-        background-color: #00000038;
+        background-color: #000000a6;
     }
 
     .elementor-2 .elementor-element.elementor-element-05d198e .elementor-swiper-button-next:hover {
-        background-color: #00000038;
+        background-color: #000000a6;
     }
 
     .elementor-2 .elementor-element.elementor-element-05d198e .elementor-swiper-button-prev:hover {
-        background-color: #00000038;
+        background-color: #000000a6;
     }
 
 </style>
