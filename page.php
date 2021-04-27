@@ -36,9 +36,16 @@ get_header(); ?>
         font-size: 2em;
     }
 
-    .elementor-2 .elementor-element.elementor-element-9dd4624
-    {
+    .elementor-2 .elementor-element.elementor-element-9dd4624 {
         padding: 0px 0px 0px 0px;
+    }
+
+    .elementor-2 .elementor-element.elementor-element-8194d2b .elementor-swiper-button-next:hover {
+        background-color: white;
+    }
+
+    .elementor-2 .elementor-element.elementor-element-8194d2b .elementor-swiper-button-prev:hover {
+        background-color: white;
     }
 
 </style>
