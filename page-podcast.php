@@ -54,8 +54,8 @@ the_content();
     body {
         padding: 0;
         margin: 0;
-        background: rgb(255, 225, 166);
-        background: linear-gradient(180deg, rgba(255, 225, 166, 1) 0%, rgba(255, 240, 209, 1) 100%);
+        background: rgb(255, 144, 132);
+        background: linear-gradient(180deg, rgba(255, 144, 132, 1) 34%, rgba(237, 76, 95, 1) 100%);
     }
 
 
@@ -87,7 +87,7 @@ the_content();
 
 
     h2 {
-        color: black;
+        color: white;
         font-family: 'Josefin Sans', sans-serif;
     }
 
@@ -102,7 +102,7 @@ the_content();
 
 
     p {
-        color: black;
+        color: white;
     }
 
 
