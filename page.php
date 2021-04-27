@@ -28,12 +28,17 @@ get_header(); ?>
         padding: 0px 0px 0px 0px;
     }
 
-    .elementor-2 .elementor-element.elementor-element-c843243 .elementor-divider__text {
+    .elementor-2 .elementor-element.elementor-element-6887c27 .elementor-divider__text {
         font-size: 2em;
     }
 
-    .elementor-2 .elementor-element.elementor-element-5354ed2 .elementor-divider__text {
+    .elementor-2 .elementor-element.elementor-element-aac72e2 .elementor-divider__text {
         font-size: 2em;
+    }
+
+    .elementor-2 .elementor-element.elementor-element-9dd4624
+    {
+        padding: 0px 0px 0px 0px;
     }
 
 </style>
