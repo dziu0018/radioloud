@@ -33,7 +33,7 @@ the_content();
                 <article class="underarticle">
                     <div class="articlegrid">
                         <div>
-                            <img src="" alt="">
+                            <img class="pic2 "src="" alt="">
                         </div>
                         <div>
                             <h2></h2>
@@ -52,11 +52,14 @@ the_content();
     body {
         padding: 0;
         margin: 0;
+        background-color: background: rgb(242, 150, 78);
+        background: linear-gradient(180deg, rgba(242, 150, 78, 1) 0%, rgba(250, 80, 122, 1) 100%);
     }
 
     main {
         padding-right: 40px;
         padding-left: 40px;
+
     }
 
     .pic {
@@ -138,7 +141,11 @@ the_content();
         color: #DB083A;
     }
 
-    img {
+    .pic {
+        border: 5px solid white;
+    }
+
+    .pic2 {
         border: 5px solid white;
     }
 
