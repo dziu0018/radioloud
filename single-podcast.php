@@ -38,7 +38,7 @@ the_content();
                         <div>
                             <h2></h2>
                             <p></p>
-                            <a href="">Lyt her</a>
+                            <button class="lyt-her-knap">Lyt her</button>
                         </div>
                     </div>
                 </article>
@@ -137,7 +137,24 @@ the_content();
         color: #DB083A;
     }
 
-    .pic {}
+    .lyt-her-knap {
+        margin: 10px;
+        color: #DB083A;
+        background-color: #FFFFFF;
+        font-size: 1.3em;
+        font-family: 'Josefin Sans';
+        font-weight: 500;
+        transition: 0.2s ease-out;
+    }
+
+    .lyt-her-knap:hover {
+        transform: scale(1.02);
+        cursor: pointer;
+        background-color: #FFFFFF;
+        color: #DB083A;
+    }
+
+
 
     a {
         color: #DB083A;
@@ -203,7 +220,7 @@ the_content();
                     location.href = episode.link;
                 })
 
-                klon.querySelector("a").href = episode.link;
+                klon.querySelector(".lyt-her-knap").href = episode.link;
                 console.log("episode", episode.link);
                 container.appendChild(klon);
             }
