@@ -104,7 +104,6 @@ the_content();
         background: rgb(252, 195, 208);
         color: white;
         padding: 20px;
-        cursor: pointer;
         display: grid;
         grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
         grid-gap: 0.8em;
@@ -162,10 +161,12 @@ the_content();
 
     .pic {
         border: 5px solid white;
+        cursor: pointer;
     }
 
     .pic2 {
         border: 5px solid white;
+        cursor: pointer;
     }
 
 </style>
