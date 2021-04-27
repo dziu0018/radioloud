@@ -19,6 +19,7 @@ get_header();
 the_content();
 ?>
 
+        <button class="back-button">Tilbage til oversigt</button>
         <article class="mainarticle">
             <img class="pic" src="" alt="">
             <div>
@@ -118,11 +119,11 @@ the_content();
 
     .pic {}
 
-    a{
+    a {
         color: #DB083A;
     }
 
-    img{
+    img {
         border: 5px solid white;
     }
 
@@ -158,8 +159,8 @@ the_content();
         document.querySelector("h1").innerHTML = podcast.title.rendered;
         document.querySelector(".pic").src = podcast.billede.guid;
         document.querySelector(".pic").alt = podcast.billede.post_title;
-
         document.querySelector(".lang_beskrivelse").innerHTML = podcast.lang_beskrivelse;
+        document.querySelector(".back-button").addEventListener("click", tilbageTilListe);
     }
 
     function visEpisode() {
@@ -185,6 +186,10 @@ the_content();
         })
     }
     getJson();
+
+    function tilbageTilListe() {
+        history.back();
+    }
 
 </script>
 
