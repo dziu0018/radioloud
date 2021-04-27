@@ -41,11 +41,19 @@ get_header(); ?>
     }
 
     .elementor-2 .elementor-element.elementor-element-8194d2b .elementor-swiper-button-next:hover {
-        background-color: #00000021;
+        background-color: #000000ad;
     }
 
     .elementor-2 .elementor-element.elementor-element-8194d2b .elementor-swiper-button-prev:hover {
-        background-color: #00000021;
+        background-color: #000000ad;
+    }
+
+    .elementor-2 .elementor-element.elementor-element-05d198e .elementor-swiper-button-next:hover {
+        background-color: #000000ad;
+    }
+
+    .elementor-2 .elementor-element.elementor-element-05d198e .elementor-swiper-button-prev:hover {
+        background-color: #000000ad;
     }
 
 </style>
