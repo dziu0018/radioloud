@@ -58,6 +58,16 @@ get_header(); ?>
 
 </style>
 
+<script>
+    document.querySelector(".elementor-2 .elementor-element.elementor-element-8ebe340 > .elementor-widget-container").addEventListener("click", audioPlayer);
+
+    function audioPlayer() {
+        console.log("hejejeehejd!!!")
+        document.querySelector(".").classList.remove
+    }
+
+</script>
+
 <?php if ( astra_page_layout() == 'left-sidebar' ) : ?>
 
 <?php get_sidebar(); ?>
