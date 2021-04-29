@@ -56,14 +56,17 @@ get_header(); ?>
         background-color: #000000a6;
     }
 
+    .visikke{
+        display: none;
+    }
 </style>
 
 <script>
-    document.querySelector(".elementor-2 .elementor-element.elementor-element-8ebe340 > .elementor-widget-container").addEventListener("click", audioPlayer);
+    document.querySelector("#lortebillede").addEventListener("click", audioPlayer);
 
     function audioPlayer() {
-        console.log("hejejeehejd!!!")
-        document.querySelector(".").classList.remove
+        console.log("hejejeehejd!!!");
+        document.querySelector("#lortebillede").classList.add("visikke");
     }
 
 </script>

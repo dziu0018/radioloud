@@ -25,6 +25,9 @@ the_content();
             <div>
                 <h1></h1>
                 <p class="lang_beskrivelse"></p>
+                <a class="spotify" href="">
+                    <img class="spotifybillede" src="#" alt="">
+                </a>
             </div>
         </article>
 
@@ -38,7 +41,8 @@ the_content();
                         <div>
                             <h2></h2>
                             <p></p>
-                            <button class="lyt-her-knap">Lyt her</button>
+                            <audio controls class="afspillyden" src="#"></audio>
+                            <a class="download" href="#">Download</a>
                         </div>
                     </div>
                 </article>
@@ -63,11 +67,11 @@ the_content();
     }
 
     .pic {
-        width: 29em;
+        width: 20em;
     }
 
     img {
-        width: 20em;
+        width: 12em;
     }
 
     h2 {
@@ -93,7 +97,7 @@ the_content();
         background: linear-gradient(180deg, rgba(242, 242, 237, 1) 0%, rgba(219, 219, 219, 1) 100%);
         padding: 20px;
         display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
         grid-gap: 0.8em;
 
 
@@ -136,7 +140,7 @@ the_content();
         color: #DB083A;
     }
 
-    .lyt-her-knap {
+    .download {
         margin: 10px;
         color: #DB083A;
         background-color: #FFFFFF;
@@ -144,6 +148,7 @@ the_content();
         font-family: 'Josefin Sans';
         font-weight: 500;
         transition: 0.2s ease-out;
+        padding: 10px;
     }
 
     .lyt-her-knap:hover {
@@ -167,6 +172,10 @@ the_content();
     .pic2 {
         border: 5px solid white;
         cursor: pointer;
+    }
+
+    .spotifybillede{
+        width: 40px;
     }
 
 </style>
@@ -203,6 +212,8 @@ the_content();
         document.querySelector(".pic").alt = podcast.billede.post_title;
         document.querySelector(".lang_beskrivelse").innerHTML = podcast.lang_beskrivelse;
         document.querySelector(".back-button").addEventListener("click", tilbageTilListe);
+        document.querySelector(".spotify").href = podcast.spotify;
+        document.querySelector(".spotifybillede").src = podcast.spotifylogo.guid;
     }
 
     function visEpisode() {
@@ -216,12 +227,9 @@ the_content();
                 klon.querySelector("img").src = episode.billede.guid;
                 klon.querySelector("img").alt = episode.billede.post_title;
                 klon.querySelector("h2").innerHTML = episode.title.rendered;
-                klon.querySelector("p").innerHTML = episode.lang_beskrivelse;
-                klon.querySelector("article").addEventListener("click", () => {
-                    location.href = episode.link;
-                })
-
-                klon.querySelector(".lyt-her-knap").href = episode.link;
+                /*klon.querySelector("p").innerHTML = episode.lang_beskrivelse;*/
+                klon.querySelector(".download").href = episode.afspilknappen;
+                klon.querySelector(".afspillyden").src = episode.afspilknappen;
                 console.log("episode", episode.link);
                 container.appendChild(klon);
             }
