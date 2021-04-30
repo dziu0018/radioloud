@@ -43,6 +43,9 @@ the_content();
                             <p></p>
                             <audio controls class="afspillyden" src="#"></audio>
                             <a class="download" href="#">Download</a>
+                            <a class="episodespotify" href="">
+                                <img class="episodespotifybillede" src="#" alt="">
+                            </a>
                         </div>
                     </div>
                 </article>
@@ -174,7 +177,11 @@ the_content();
         cursor: pointer;
     }
 
-    .spotifybillede{
+    .spotifybillede {
+        width: 40px;
+    }
+
+    .episodespotifybillede{
         width: 40px;
     }
 
@@ -230,6 +237,8 @@ the_content();
                 /*klon.querySelector("p").innerHTML = episode.lang_beskrivelse;*/
                 klon.querySelector(".download").href = episode.afspilknappen;
                 klon.querySelector(".afspillyden").src = episode.afspilknappen;
+                klon.querySelector(".episodespotify").href = episode.spotify;
+                klon.querySelector(".episodespotifybillede").src = episode.episodespotifylogo.guid;
                 console.log("episode", episode.link);
                 container.appendChild(klon);
             }
