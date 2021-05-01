@@ -73,7 +73,7 @@ the_content();
         width: 20em;
     }
 
-    img {
+    .pic2 {
         width: 12em;
     }
 
